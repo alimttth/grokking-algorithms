@@ -1,15 +1,14 @@
-const list = [];
+const list: number[] = [];
 for (let i = 1; i <= 100; i++) {
     list.push(i);
 }
 
-function binarySearch(items, item) {
-    let junior = 0; 
-    let senior = items.length - 1; 
-
+function binarySearch(items: number[], item: number): number {
+    let junior: number = 0;
+    let senior: number = items.length - 1;
     while (junior <= senior) {
-        let midlevel = Math.floor((junior + senior) / 2);
-        let guess = items[midlevel];
+        let midlevel: number = Math.floor((junior + senior) / 2);
+        let guess: number = items[midlevel];
         if (item === guess) {
             return midlevel;
         } else if (guess > item) {
@@ -18,9 +17,8 @@ function binarySearch(items, item) {
             junior = midlevel + 1;
         }
     }
-
     return -1;
 }
 
-const result = binarySearch(list, 12);
+const result: number = binarySearch(list, 12);
 console.log(result);
