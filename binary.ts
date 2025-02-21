@@ -21,3 +21,4 @@ function binarySearch(items: number[], item: number): number {
 }
 
 const result: number = binarySearch(list, 12);
+console.log(result);
